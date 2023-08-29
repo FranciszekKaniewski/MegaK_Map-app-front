@@ -1,32 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import {TestInterface} from 'types'
-import './App.css';
 
-function App() {
+import './App.css'
 
-const foobar: TestInterface = {
-  a:'e'
-}
+export const App = () => {
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <>
+        <header>
+            <h1><b>Mega </b> <span>Ogłoszenia</span></h1>
+            <button className="add-notice-btn">Dodaj ogłoszenie</button>
+            <div className="search">
+                <div className="search-area">
+                    <input type="text" placeholder='search...'/>
+                    <button>🔍</button>
+                </div>
+            </div>
+        </header>
+        <div className="map"></div>
+      </>
   );
-}
-
-export default App;
+};
