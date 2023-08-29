@@ -1,0 +1,16 @@
+.map{
+    background-color: #8cce8c;
+    height: calc(94vh - 20px);
+    width: 100%;
+}
+
+@media screen and (max-width:740px) {
+    .map{
+        height: calc(100vh - 129px);
+    }
+}
+@media screen and (max-width:480px) {
+    .map{
+        height: calc(100vh - 171px);
+    }
+}

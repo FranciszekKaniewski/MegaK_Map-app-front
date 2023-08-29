@@ -1,0 +1,50 @@
+header{
+    padding: 10px;
+    min-height: 6vh;
+    background-color: #6200ee;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+header>*{
+    margin: auto;
+    padding: 10px;
+}
+h1>span{
+    font-weight: normal;
+}
+.add-notice-btn{
+    margin: auto 15px;
+    min-height: 30px;
+    min-width: 200px;
+}
+
+.search-area{
+    display: flex;
+    flex-wrap: wrap;
+}
+.search-area>input{
+    margin: auto 5px;
+    font-size: 18px;
+    text-align: center;
+    height: 30px;
+    border-radius: 5px;
+    border:none;
+    width: 75%;
+}
+.search{
+    width: 210px;
+    transition: .4s;
+}
+.search-area>button {
+    line-height: 30px;
+    height: 30px;
+    width: auto;
+    padding: 2px;
+}
+@media screen and (min-width:1000px) {
+    .search:focus-within{
+        width: 500px;
+    }
+}
