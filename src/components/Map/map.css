@@ -4,6 +4,10 @@
     width: 100%;
 }
 
+.leaflet-container{
+    height: 100%;
+}
+
 @media screen and (max-width:740px) {
     .map{
         height: calc(100vh - 129px);
