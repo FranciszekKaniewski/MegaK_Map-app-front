@@ -8,12 +8,12 @@
     height: 100%;
 }
 
-@media screen and (max-width:740px) {
+@media screen and (max-width:712px) {
     .map{
         height: calc(100vh - 129px);
     }
 }
-@media screen and (max-width:480px) {
+@media screen and (max-width:469px) {
     .map{
         height: calc(100vh - 171px);
     }

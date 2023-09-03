@@ -18,7 +18,7 @@ export const Header = () => {
     return(
         <header>
             <h1><b>Mega </b> <span>Ogłoszenia</span></h1>
-            <Btn text="Dodaj ogłoszenie"/>
+            <Btn to='/add' text="Dodaj ogłoszenie"/>
             <div className="search">
                 <form className="search-area" onSubmit={setSearchFromState}>
                     <input
