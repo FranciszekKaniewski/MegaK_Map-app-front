@@ -3,7 +3,7 @@
         "baseUrl": ".",
         "paths": {
             "types":[
-                "../map-app-back/types"
+                "../MegaK_Map-app-back/types"
             ]
         }
     }
