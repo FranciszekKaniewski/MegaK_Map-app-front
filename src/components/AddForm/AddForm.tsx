@@ -16,7 +16,7 @@ export const AddForm = () =>{
 
     const [loading,setLoading] = useState(false);
     const [form,setForm] = useState(emptyForm);
-    const [id,setId] = useState<string|null>(null);
+    const [message,setMessage] = useState<string|null>(null);
 
     const updateForm = (key:string,value:any) =>{
         setForm(form=>({
@@ -30,11 +30,9 @@ export const AddForm = () =>{
 
         setLoading(true);
 
-        try {
+        const {lat,lon} = await geocoding(form.address);
 
-            const {lat,lon} = await geocoding(form.address);
-
-            const res = await fetch(`http://localhost:3001/ad`,{
+        const res = await fetch(`http://localhost:3001/ad`,{
                 method:'POST',
                 headers:{
                     'Content-Type': 'application/json',
@@ -45,11 +43,15 @@ export const AddForm = () =>{
                     lon,
                 }),
             });
-        }finally {
-            setId(form.name);
+
+        if(res.status !== 200){
+            setMessage((await res.json()).message)
+        }else{
+            setMessage('Ogłoszenie '+form.name+' zostało dodane');
             setForm(emptyForm);
-            setLoading(false);
         }
+
+        setLoading(false);
     }
 
     if(loading) return <h2>Trwa dodawanie...</h2>
@@ -57,7 +59,7 @@ export const AddForm = () =>{
     return (
     <form action="" onSubmit={saveAd} className='add-form'>
         <h1>Dodaj ogłoszenie!</h1>
-        {id? <p>Ogłoszenie o nazwie <b>{id}</b> zostało dodane!</p> : null}
+        {message? <p>{message}</p> : null}
             <label>
                 Nazwa
                 <input
