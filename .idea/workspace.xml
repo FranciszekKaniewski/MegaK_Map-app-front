@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="871ed12e-a176-4474-9854-fb340b98fde0" name="Changes" comment="Added AddForm and styled, geocoding, fetch to backend to add new Ad">
+    <list default="true" id="871ed12e-a176-4474-9854-fb340b98fde0" name="Changes" comment="From errors validation added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AddForm/AddForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddForm/AddForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/utils/geocoding.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/utils/geocoding.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layouts/Header/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layouts/Header/Header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layouts/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layouts/Header/Header.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +66,7 @@
       <workItem from="1693732167058" duration="243000" />
       <workItem from="1693732418035" duration="88000" />
       <workItem from="1693732515300" duration="8981000" />
-      <workItem from="1693904575234" duration="1705000" />
+      <workItem from="1693904575234" duration="1937000" />
     </task>
     <task id="LOCAL-00001" summary="Map and markers finished.">
       <created>1693734593896</created>
@@ -96,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693754146337</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="From errors validation added">
+      <created>1693906382251</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1693906382251</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,6 +124,7 @@
     <MESSAGE value="Map and markers finished." />
     <MESSAGE value="React router init and style css fixed." />
     <MESSAGE value="Added AddForm and styled, geocoding, fetch to backend to add new Ad" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added AddForm and styled, geocoding, fetch to backend to add new Ad" />
+    <MESSAGE value="From errors validation added" />
+    <option name="LAST_COMMIT_MESSAGE" value="From errors validation added" />
   </component>
 </project>

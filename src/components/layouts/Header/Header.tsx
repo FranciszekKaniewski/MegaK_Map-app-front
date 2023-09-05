@@ -2,6 +2,7 @@ import React, {FormEvent, useContext, useState} from "react";
 
 import {Btn} from "../../common/Btn/Btn";
 import {SearchContext} from "../../contexts/search.context";
+import {Link} from "react-router-dom";
 
 import './Header.css'
 
@@ -17,7 +18,7 @@ export const Header = () => {
 
     return(
         <header>
-            <h1><b>Mega </b> <span>Ogłoszenia</span></h1>
+            <Link to='/'><h1><b>Mega </b> <span>Ogłoszenia</span></h1></Link>
             <Btn to='/add' text="Dodaj ogłoszenie"/>
             <div className="search">
                 <form className="search-area" onSubmit={setSearchFromState}>
