@@ -17,6 +17,7 @@ export const AddForm = () =>{
     const [loading,setLoading] = useState(false);
     const [form,setForm] = useState(emptyForm);
     const [message,setMessage] = useState<string|null>(null);
+    const [messageColor,setMessageColor] = useState<string>('')
 
     const updateForm = (key:string,value:any) =>{
         setForm(form=>({
@@ -45,9 +46,11 @@ export const AddForm = () =>{
             });
 
         if(res.status !== 200){
-            setMessage((await res.json()).message)
+            setMessage((await res.json()).message);
+            setMessageColor('#ce6363');
         }else{
-            setMessage('Ogłoszenie '+form.name+' zostało dodane');
+            setMessage('Ogłoszenie ' + form.name + ' zostało dodane');
+            setMessageColor('#7ace63');
             setForm(emptyForm);
         }
 
@@ -59,7 +62,7 @@ export const AddForm = () =>{
     return (
     <form action="" onSubmit={saveAd} className='add-form'>
         <h1>Dodaj ogłoszenie!</h1>
-        {message? <p>{message}</p> : null}
+        {message? <p style={{color:messageColor}}>{message}</p> : null}
             <label>
                 Nazwa
                 <input
